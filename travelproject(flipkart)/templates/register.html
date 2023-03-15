@@ -1,0 +1,30 @@
+<Html xmlns="http://www.w3.org/1999/html">
+<head>
+<title>
+Registration Page
+</title>
+</head>
+<body bgcolor="Lightskyblue" style="text-align:center">
+<h2><br>REGISTRATION FORM</h2>
+<br>
+<br>
+<form action="" method="post">{% csrf_token %}
+<label>Username: </label>
+    <input type="text" name="username" ><br><br>
+<label>Firstname: </label>
+<input type="text" name="firstname" > <br> <br>
+<label>Lastname: </label>
+<input type="text" name="lastname" > <br> <br>
+<label>Email:    </label>
+<input type="email"  name="email"/> <br> <br>
+<label>Password: </label>
+<input type="Password"  name="pass"> <br> <br>
+    <label>confirm password:</label>
+<input type="Password"  name="conpass"> <br> <br>
+<input type="submit"/>
+</form>
+{% for i in messages %}
+<b>{{ i }}</b>
+{% endfor %}
+</body>
+</html>

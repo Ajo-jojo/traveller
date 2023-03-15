@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form</title>
+    <style>
+    .demo{
+     background-color:aqua;text-align:center;
+     }
+
+    </style>
+</head>
+<body class="demo">
+<h2> Enter Your Details</h2>
+<form method="post" action="login.html" >
+
+    <input type="text" name="username" placeholder="enter your name"><br>
+    <input type="email" name="email" placeholder="enter your email"><br>
+    <input type="text" name="phno" placeholder="enter your Phone Number"><br>
+    <label for="male">Male</label>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="female">Female</label>
+    <input type="radio" id="female" name="gender" value="female"><br>
+    <label for="agreements">I have read and accept all the agreeements. </label>
+    <input type="checkbox" name="agreements" id="agreements" ><br>
+    <input type="password" name="password" placeholder="enter your password"><br>
+    <input type="password" name="re-password" placeholder="re-confirm your password"><br>
+    <input type="submit">
+</form>
+</body>
+</html>

@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="{% static 'styles/login.css' %}">
+<title> Login </title>
+</head>
+<body>
+    <div class="login-page">
+      <div class="form">
+        <div class="login">
+          <div class="login-header">
+            <h3>LOGIN</h3>
+            <p>Please enter your credentials to login.</p>
+          </div>
+        </div>
+        <form class="login-form" action="" method="post">{% csrf_token %}
+          <input type="text" name="username" placeholder="username"/>
+          <input type="password" name="password" placeholder="password"/>
+          <input type="submit" style="font-family:Roboto,sans-serif; text-transform: uppercase;outline: 0;
+                   background-color: #328f8a;background-image: linear-gradient(45deg,#328f8a,#08ac4b);width: 100%;
+                   border: 0; padding: 15px;
+                   color: #FFFFFF;font-size:
+                   14px;-webkit-transition: all 0.3 ease;transition: all 0.3 ease; cursor: pointer;">
+          {% for i in messages %}
+          <b>{{ i }}</b>
+          {% endfor %}
+        </form>
+      </div>
+    </div>
+</body>
+</html>
